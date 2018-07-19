@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2DF991FE1DCC938D27D08D01 /* Pods_iOSAppIcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36F550ADA13F0D2945EEBAC /* Pods_iOSAppIcon.framework */; };
 		FCBF92AA21006F630040DA12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBF92A921006F630040DA12 /* main.m */; };
+		FCBF92B421007D440040DA12 /* NSImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBF92B321007D440040DA12 /* NSImage+Resize.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +30,8 @@
 		B36F550ADA13F0D2945EEBAC /* Pods_iOSAppIcon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSAppIcon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBF92A621006F630040DA12 /* iOSAppIcon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iOSAppIcon; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBF92A921006F630040DA12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FCBF92B221007D440040DA12 /* NSImage+Resize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSImage+Resize.h"; sourceTree = "<group>"; };
+		FCBF92B321007D440040DA12 /* NSImage+Resize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Resize.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +85,26 @@
 			isa = PBXGroup;
 			children = (
 				FCBF92A921006F630040DA12 /* main.m */,
+				FCBF92B021007D150040DA12 /* module */,
 			);
 			path = iOSAppIcon;
+			sourceTree = "<group>";
+		};
+		FCBF92B021007D150040DA12 /* module */ = {
+			isa = PBXGroup;
+			children = (
+				FCBF92B121007D260040DA12 /* image_resize */,
+			);
+			path = module;
+			sourceTree = "<group>";
+		};
+		FCBF92B121007D260040DA12 /* image_resize */ = {
+			isa = PBXGroup;
+			children = (
+				FCBF92B221007D440040DA12 /* NSImage+Resize.h */,
+				FCBF92B321007D440040DA12 /* NSImage+Resize.m */,
+			);
+			path = image_resize;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBF92B421007D440040DA12 /* NSImage+Resize.m in Sources */,
 				FCBF92AA21006F630040DA12 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
