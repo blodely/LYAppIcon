@@ -16,11 +16,14 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
+xcshareddata/
 
 ## Other
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
+
+*.xcworkspacedata
 
 ## Obj-C/Swift specific
 *.hmap
@@ -34,7 +37,7 @@ xcuserdata/
 # you should judge for yourself, the pros and cons are mentioned at:
 # https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
 #
-# Pods/
+Pods/
 
 # Carthage
 #
