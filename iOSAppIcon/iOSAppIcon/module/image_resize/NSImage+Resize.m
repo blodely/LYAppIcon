@@ -13,31 +13,33 @@
 
 - (NSImage *)resize:(CGSize)size {
 	
-	CGFloat actualHeight = self.size.height;
-	CGFloat actualWidth = self.size.width;
-	if (actualWidth <= size.width && actualHeight <= size.height) {
+	CGSize asize = [self size];
+	
+	/*
+	if (asize.width <= size.width && asize.height <= size.height) {
 		// SMALLER IMAGE
 		return self;
 	}
+	*/
 	
-	float oldRatio = actualWidth / actualHeight;
+	float oldRatio = asize.width / asize.height;
 	float newRatio = size.width / size.height;
 	if (oldRatio < newRatio) {
-		oldRatio = size.height / actualHeight;
-		actualWidth = oldRatio * actualWidth;
-		actualHeight = size.height;
+		oldRatio = size.height / asize.height;
+		asize.width = oldRatio * asize.width;
+		asize.height = size.height;
 	} else {
-		oldRatio = size.width / actualWidth;
-		actualHeight = oldRatio * actualHeight;
-		actualWidth = size.width;
+		oldRatio = size.width / asize.width;
+		asize.height = oldRatio * asize.height;
+		asize.width = size.width;
 	}
 	
-	NSImage *image = [[NSImage alloc] initWithSize:(NSSize){actualWidth, actualHeight}];
+	NSImage *image = [[NSImage alloc] initWithSize:(NSSize){asize.width, asize.height}];
 	
 	[image lockFocus];
-	[self setSize:(NSSize){actualWidth, actualHeight}];
+	[self setSize:asize];
 	[[NSGraphicsContext currentContext] setImageInterpolation:NSImageInterpolationHigh];
-	[self drawAtPoint:NSZeroPoint fromRect:(NSRect){0.0f, 0.0f, actualWidth, actualHeight} operation:NSCompositingOperationCopy fraction:1.0f];
+	[self drawAtPoint:NSZeroPoint fromRect:(NSRect){0.0f, 0.0f, asize.width, asize.height} operation:NSCompositingOperationCopy fraction:1.0f];
 	[image unlockFocus];
 	
 	return image;
