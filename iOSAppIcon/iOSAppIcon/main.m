@@ -51,11 +51,21 @@ int main(int argc, const char * argv[]) {
 
 					
 					for (NSNumber *side in targetSize) {
-						NSImage *new = [image resize:(CGSize){side.integerValue, side.integerValue}];
+						CGSize size = (CGSize){(CGFloat)[side integerValue], (CGFloat)[side integerValue]};
+						NSImage *new = [image resize:size];
 						
-						// TODO: WRITE IMAGE FILE
+						// DONE: WRITE IMAGE FILE
+						NSString *iconpath = [directory stringByAppendingFormat:@"/icon-%@.png", side];
+						
+						NSBitmapImageRep *imgRep = [NSBitmapImageRep imageRepWithData:[new TIFFRepresentation]];
+						[imgRep setSize:size];
+						[[imgRep representationUsingType:NSPNGFileType properties:@{}] writeToFile:iconpath atomically:YES];
+						
+						imgRep = nil;
+						new = nil;
 					}
 					
+					image = nil;
 				} else {
 					NSLog(@"IMAGE SIZE %@ NOT RIGHT.", NSStringFromSize([image size]));
 					image = nil;
