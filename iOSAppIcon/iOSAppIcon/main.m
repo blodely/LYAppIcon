@@ -10,6 +10,7 @@
 #import <Foundation/Foundation.h>
 #import <AppKit/AppKit.h>
 #import "NSImage+Resize.h"
+#import "IAFileMgr.h"
 
 
 int main(int argc, const char * argv[]) {

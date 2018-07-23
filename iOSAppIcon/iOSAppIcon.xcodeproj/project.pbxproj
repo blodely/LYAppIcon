@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DF991FE1DCC938D27D08D01 /* Pods_iOSAppIcon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36F550ADA13F0D2945EEBAC /* Pods_iOSAppIcon.framework */; };
+		FCBE19A221057703004F1D1B /* IAFileMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBE19A121057703004F1D1B /* IAFileMgr.m */; };
 		FCBF92AA21006F630040DA12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBF92A921006F630040DA12 /* main.m */; };
 		FCBF92B421007D440040DA12 /* NSImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = FCBF92B321007D440040DA12 /* NSImage+Resize.m */; };
 /* End PBXBuildFile section */
@@ -28,6 +29,8 @@
 		358ABCD666316462A271D4C9 /* Pods-iOSAppIcon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAppIcon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSAppIcon/Pods-iOSAppIcon.debug.xcconfig"; sourceTree = "<group>"; };
 		6799E0B3451E7A7289164881 /* Pods-iOSAppIcon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSAppIcon.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSAppIcon/Pods-iOSAppIcon.release.xcconfig"; sourceTree = "<group>"; };
 		B36F550ADA13F0D2945EEBAC /* Pods_iOSAppIcon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSAppIcon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCBE19A021057703004F1D1B /* IAFileMgr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAFileMgr.h; sourceTree = "<group>"; };
+		FCBE19A121057703004F1D1B /* IAFileMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAFileMgr.m; sourceTree = "<group>"; };
 		FCBF92A621006F630040DA12 /* iOSAppIcon */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = iOSAppIcon; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCBF92A921006F630040DA12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FCBF92B221007D440040DA12 /* NSImage+Resize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSImage+Resize.h"; sourceTree = "<group>"; };
@@ -63,6 +66,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FCBE199F210576DB004F1D1B /* files */ = {
+			isa = PBXGroup;
+			children = (
+				FCBE19A021057703004F1D1B /* IAFileMgr.h */,
+				FCBE19A121057703004F1D1B /* IAFileMgr.m */,
+			);
+			path = files;
+			sourceTree = "<group>";
+		};
 		FCBF929D21006F630040DA12 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +105,7 @@
 		FCBF92B021007D150040DA12 /* module */ = {
 			isa = PBXGroup;
 			children = (
+				FCBE199F210576DB004F1D1B /* files */,
 				FCBF92B121007D260040DA12 /* image_resize */,
 			);
 			path = module;
@@ -185,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBE19A221057703004F1D1B /* IAFileMgr.m in Sources */,
 				FCBF92B421007D440040DA12 /* NSImage+Resize.m in Sources */,
 				FCBF92AA21006F630040DA12 /* main.m in Sources */,
 			);
