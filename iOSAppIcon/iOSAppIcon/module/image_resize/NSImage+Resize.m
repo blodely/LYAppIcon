@@ -34,6 +34,16 @@
 		asize.width = size.width;
 	}
 	
+	{
+		CGFloat scale = 1;
+		NSScreen *screen = [NSScreen mainScreen];
+		NSRect backing = [screen convertRectToBacking:screen.frame];
+		NSRect running = screen.frame;
+		scale = backing.size.width / running.size.width;
+		
+		asize = (CGSize){asize.width / scale, asize.height / scale};
+	}
+	
 	NSImage *image = [[NSImage alloc] initWithSize:(NSSize){asize.width, asize.height}];
 	
 	[image lockFocus];
